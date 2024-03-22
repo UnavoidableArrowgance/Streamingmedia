@@ -1,0 +1,393 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*end of css reset*/
+
+html,body {
+    background-color: #020659;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    width: 375px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+header{
+    background: linear-gradient(0.25turn, #030ABC,#000);
+    color: #fff;
+    padding-top:60px;
+    padding-left: 20px;
+    padding-right:20px;
+    clear: both;
+}
+h1{
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom:1rem;
+    line-height: 2em;
+    padding-top: 15px;
+}
+h1+p{
+    padding-bottom:1rem;
+}
+nav h2{
+    font-size: 0;
+}
+
+h2, h3{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav{
+    position:fixed;
+    top:0;
+}
+ul {
+    max-height: 0;
+    overflow: hidden;
+  }
+  input:checked ~ ul {
+    max-height: 500px;
+  }
+  input {
+    display: none;
+  }
+
+
+  .header {
+    background-color:#030ABC;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    width: 375px;
+    z-index: 3;
+    height: 80px;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li+li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li+li a:hover,
+  .header .menu-btn:hover {
+    background-color: #590242;
+  }
+  
+  .header ul .logo {
+    position:absolute;
+    font-size: 2em;
+    font-weight: 600;
+    color:#fff;
+    font-variant: small-caps;
+    top: 30px;
+    left:90px;
+    text-decoration: none;
+
+  }
+
+  
+  
+  /* menu */
+  
+  .header .menu {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    padding: 20px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 215px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+
+h2 {
+    font-size: 1em;
+    font-weight: bolder;
+    color:#590242;
+    padding:1rem;
+}
+
+
+.more:hover{
+    background-color: #020659;
+  }
+
+audio::-webkit-media-controls-mute-button {
+    background-color:#fff;
+    border-radius:50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color:#fff;
+    border-radius:50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color:rgba(255, 255, 255, .5)
+}
+
+
+#trending{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+}
+
+#trending section{
+    display: flex;
+    flex-direction: column;
+    overflow:visible;
+    margin-left:20px;
+}
+#trending img{
+    order:-1;
+}
+#trending audio{
+    position:relative;
+    bottom:200px;
+    margin-bottom:-50px;
+}
+
+#trending section p{
+    background-color: #ccc;
+    color:#590242;
+    padding: .5rem;
+    height:1.5rem;
+    margin-bottom: 10px;
+}
+
+#trending section h3{
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #ccc;
+    color:#590242;
+    height: 2rem;
+    padding: .5rem;
+}
+#trending section:last-of-type{
+    margin-right:20px
+}
+
+
+.boxbtn a{
+    clear: both;
+    float:left;
+    background-color: #590242;
+    text-decoration: none;
+    color:#fff;
+    padding:.5rem 2rem;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px #000;
+    margin-bottom: 2rem;
+}
+
+.scroll::-webkit-scrollbar{
+    width:105px;
+}
+
+#trending::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 15px #590242;
+}
+
+#trending::-webkit-scrollbar-thumb{
+    background: #590242;
+    border-radius: 5px;
+}
+#trending::-webkit-scrollbar-thumb:hover{
+    background: #020659;
+}
+
+
+#playlists{
+    display: grid;
+    clear: both;
+    grid-template-rows: auto;
+}
+
+#yourPlaylist, #curatedPlaylist{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #2699FB;
+}
+
+#yourPlaylist section, #curatedPlaylist section{
+    display: flex;
+    flex-direction: column;
+    overflow:visible;
+    margin:10px;
+    margin-left:20px;
+    background-color: #0D8DFB;
+    padding:5px;
+    text-align: center;
+    color: #fff;
+}
+
+#yourPlaylist section h3, #curatedPlaylist section h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+
+
+#curatedPlaylist{
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #030A8C;
+}
+
+#curatedPlaylist section{
+    display: flex;
+    flex-direction: column;
+    overflow:visible;
+    margin:10px;
+    margin-left:20px;
+    background-color: #020873;
+    padding:5px;
+    text-align: center;
+    color: #fff;
+}
+
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar{
+    width:15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #000;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background:#ffffff;
+}
+
+
+footer{
+    clear: both;
+    padding: 1rem;
+    color: #590242;
+    text-align: center;
+    font-size: .8rem;
+}
+
+
