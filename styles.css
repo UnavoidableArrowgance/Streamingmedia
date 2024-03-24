@@ -67,13 +67,12 @@ header{
 }
 h1{
     font-weight: bold;
-    font-size: 22px;
-    padding-bottom:1rem;
+    font-size: 1.25em;
     line-height: 2em;
     padding-top: 15px;
 }
 h1+p{
-    padding-bottom:1rem;
+    padding-bottom:1em;
 }
 nav h2{
     font-size: 0;
@@ -112,14 +111,15 @@ ul {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #35229c;
   }
   
   .header li+li a {
     display: block;
     padding: 20px 20px;
-    border-right: 1px solid #f4f4f4;
     text-decoration: none;
+    color: #fff;
+    text-align: center;
   }
   
   .header li+li a:hover,
@@ -136,8 +136,8 @@ ul {
     top: 5px;
     left:90px;
     text-decoration: none;
-
   }
+
 
   
   
@@ -194,7 +194,7 @@ ul {
   }
   
   .header .menu-btn:checked ~ .menu {
-    max-height: 215px;
+    max-height: 285px;
   }
   
   .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -245,6 +245,14 @@ audio::-webkit-media-controls-enclosure {
     overflow-x: scroll;
 }
 
+#trending section h3{
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, .8);
+    color:#590242;
+    padding: .5rem;
+}
+
 #trending section{
     display: flex;
     flex-direction: column;
@@ -254,29 +262,32 @@ audio::-webkit-media-controls-enclosure {
 #trending img{
     order:-1;
     width:330px;
-    height:290px;
+    height:330px;
+    background-size: cover;
+    margin-bottom: -70px;
 }
 #trending audio{
     position:relative;
-    bottom:200px;
+    bottom:230px;
+    left: 12px;
     margin-bottom:-50px;
 }
 
-#trending section p{
-    background-color: #ccc;
+#trending section dl{
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
     color:#590242;
     padding: .5rem;
     height:1.5rem;
     margin-bottom: 10px;
+    padding-right:5px;
 }
 
-#trending section h3{
-    font-size: larger;
-    font-weight: bolder;
-    background-color: #ccc;
-    color:#590242;
-    padding: .5rem;
+#trending section dt{
+    margin-right: 7px;
+    font-style: italic;
 }
+
 #trending section:last-of-type{
     margin-right:20px
 }
@@ -293,6 +304,14 @@ audio::-webkit-media-controls-enclosure {
     border-radius: 10px;
     box-shadow: 0 0px 2px #000;
     margin-bottom: 2rem;
+}
+
+.boxbtn a:hover{
+    background-color: #020659;
+}
+
+.boxbtn a:focus{
+    background-color: #010549;
 }
 
 .scroll::-webkit-scrollbar{
@@ -343,8 +362,14 @@ audio::-webkit-media-controls-enclosure {
     margin-bottom: 20px;
     margin-top: 5px;
 }
+#yourPlaylist section a, #curatedPlaylist section a{
+    color: #fff;
+    text-decoration: none;
+}
 
-
+#yourPlaylist section:hover, #curatedPlaylist section:hover{
+    background-color: #590242;
+}
 
 #curatedPlaylist{
     display: flex;
@@ -389,5 +414,90 @@ footer{
     text-align: center;
     font-size: .8rem;
 }
+
+
+
+@media (min-width: 834px) {
+    body {
+        width: 834px;
+    }
+
+    .header ul .logo {
+        top: -5px;
+        left:50px;
+      }
+
+      
+  .header ul .logo:hover{
+    background-color: #590242;
+  }
+    
+    
+    .header ul {
+        display: flex;
+        flex-direction: row-reverse;
+        height:70px;
+        background: linear-gradient(0.25turn, #030A8C,#030ABC);
+        box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+        width: 375px;
+        z-index: 3;
+      }
+    
+    
+    .header li {
+        float: right;
+        margin-left: 20px;
+      }
+      
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        float: left;
+        max-height: none;
+        width: 834px
+      }
+      .header .menu-icon {
+        display: none;
+      }
+    
+
+
+    .boxbtn a{
+        float: right;
+    }
+
+    #playlists{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #playlists h2{
+        grid-row: 1;
+    }
+
+    #yourPlaylist, #curatedPlaylist{
+        flex-direction: column;
+        height: 465px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #yourPlaylist img, #curatedPlaylist img{
+        float: left;
+        padding-right: 5px;
+    }
+
+    .boxbtn{
+        grid-row: 3;
+    }
+    header h1{
+        padding-top: 50px;
+    }
+
+
+  }
+
+
 
 
