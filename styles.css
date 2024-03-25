@@ -428,15 +428,15 @@ footer{
       }
 
       
-  .header ul .logo:hover{
+    .header ul .logo:hover{
     background-color: #590242;
-  }
+    }
     
     
     .header ul {
         display: flex;
-        flex-direction: row-reverse;
-        height:70px;
+        flex-direction: row;
+        height:67px;
         background: linear-gradient(0.25turn, #030A8C,#030ABC);
         box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
         width: 375px;
@@ -445,20 +445,22 @@ footer{
     
     
     .header li {
-        float: right;
         margin-left: 20px;
       }
+      .header li:first-of-type {
+        margin-left: 335px;
+      }
       
-      .header li a {
+    .header li a {
         padding: 20px 30px;
       }
-      .header .menu {
+    .header .menu {
         clear: none;
         float: left;
         max-height: none;
         width: 834px
       }
-      .header .menu-icon {
+    .header .menu-icon {
         display: none;
       }
     
